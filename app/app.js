@@ -1,12 +1,17 @@
 (function () {
     angular.module("beacon", ["ui.router"])
         .config(function ($stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.otherwise("/");
+            $urlRouterProvider.otherwise("/login");
             $stateProvider
                 .state("login", {
-                    url: "/",
+                    url: "/login",
                     templateUrl: "app/login/login.html",
                     controller: "LoginController"
+                })
+                .state("signup", {
+                    url: "/signup",
+                    templateUrl: "app/signup/signup.html",
+                    controller: "SignupController"
                 });
         });
 }());
