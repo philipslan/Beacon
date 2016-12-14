@@ -54,7 +54,7 @@ module.exports.getGameById = function (req, res) {
 }
 
 module.exports.editGame = function (req, res) {
-    Game.
+    Game. 
         findOneAndUpdate({key: req.body.key}, req.body).
         exec().
         then((game) => {

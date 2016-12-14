@@ -1,5 +1,5 @@
 (function(){
-    angular.module("leagueOfScrubs")
+    angular.module("beacon")
     .directive('ngEnter', function() {
         return function(scope, element, attrs) {
             element.bind("keydown keypress", function(event) {

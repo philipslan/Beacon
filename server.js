@@ -28,17 +28,11 @@ app.get('/', function(req,res){
     res.sendFile(__dirname + "/index.html");
 });
 
-var gameController = require("./server/controller/game.controller");
-var eventController = require("./server/controller/event.controller");
-// Game Controller
-app.get("/api/game", gameController.getGames);
-app.get("/api/game/gameKey/:gameKey", gameController.getGameByKey);
-app.get("/api/game/:id", gameController.getGameById);
-app.post("/api/game", gameController.addGame);
-app.put("/api/game", gameController.editGame);
-// Event Controller
-app.get("/api/event", eventController.getEvents);
-app.post("/api/event", eventController.addEvent);
+// User Controller
+var userController = require("./server/controller/user.controller");
+app.post("/api/user", userController.addUser);
+app.post("/api/login", userController.findUser);
+app.get("/api/user", userController.getUsers);
 
 app.listen(app.get('port'), function(){
     console.log("Listening on port", app.get('port'));
