@@ -6,7 +6,7 @@ module.exports.addEvent = function (req, res) {
     event.
         save().
         then(function (event) {
-            res.json(event);
+            res.sendStatus(200);
         }).
         catch(function (err) {
             res.sendStatus(err);
@@ -22,5 +22,14 @@ module.exports.getEvents = function (req, res) {
         }).
         catch(function(err) {
             res.sendStatus(err);
+        });
+}
+
+module.exports.getEvents = function (req, res) {
+    User.
+        find({}).
+        exec().
+        then(function (events) {
+            res.json(events);
         });
 }
