@@ -3,6 +3,12 @@ html, body, .main {
     height: 100%;
     width: 100%;
 }
+.no-select {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
+}
 /* Colors */
 .blue {
     color: rgb(48, 64, 161);
@@ -53,7 +59,7 @@ html, body, .main {
     background: white;
 }
 .dashboard .title {
-    box-shadow: 0 2px 2px -2px gray;
+    box-shadow: 0 2px 4px -2px gray;
 }
 .dashboard .title .col-md-2 {
     text-align: center;
@@ -165,7 +171,7 @@ html, body, .main {
        -o-transition: background .5s, opacity 1s;
           transition: background .5s, opacity 1s;
 }
-.dashboard .title .light-blue-bt:after {
+.dashboard .title .light-blue-bt:after, .add-button .col-md-12:after {
     content: "";
     display: block;
     position: absolute;
@@ -186,9 +192,9 @@ html, body, .main {
        -o-transition: background .5s, opacity 1s;
           transition: background .5s, opacity 1s;
 }
-.dashboard .title .col-md-2:active:after {
+.dashboard .title .col-md-2:active:after, .add-button .col-md-12:active:after {
     -webkit-background-size: 0% 0%;
-          background-size: 0% 0%;
+    background-size: 0% 0%;
     opacity: .2;
     -webkit-transition: 0s;
        -o-transition: 0s;
@@ -197,6 +203,20 @@ html, body, .main {
 .dashboard .title .col-md-2 h3 {
     margin: 0px;
     padding: 15px;
+}
+.add-button {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    background: rgba(0, 159, 215, .2);
+    border-bottom: 2px solid rgba(0, 159, 215, .2);
+    border-left: 1px solid rgba(0, 159, 215, .2);
+    border-right: 1px solid rgba(0, 159, 215, .2);
+    color: rgb(0, 159, 215);
+    cursor: pointer;
+}
+.add-button .col-md-12 {
+    padding: 1rem;
 }
 .footer {
     position: absolute;
