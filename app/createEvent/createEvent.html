@@ -1,0 +1,27 @@
+<div class="createEvent">
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li><a href="createEvent#type" data-toggle="tab">Type</a></li>
+			<li><a href="createEvent#description" data-toggle="tab">Description</a></li>
+			<li><a href="createEvent#time" data-toggle="tab">Time</a></li>
+			<li><a href="createEvent#friends" data-toggle="tab">Friends</a></li>
+		</ul>
+		<div id="myTabContent" class="tab-content">
+			<div class="tab-pane fade active in" id="all" id="all">
+				<div ui-view="docHub"></div>
+			</div>
+			<div class="tab-pane fade" id="type">
+				<div ui-view="type" class="type"></div> 
+			</div>
+			<div class="tab-pane fade" id="description">
+				<div ui-view="description" class="description"></div> 
+			</div>
+			<div class="tab-pane fade" id="time">
+				<div ui-view="time" class="time"></div>
+			</div>
+			<div class="tab-pane fade" id="friends">
+				<div ui-view="friends" class="friends"></div> 
+			</div>
+		</div>
+	</div>
+</div>
