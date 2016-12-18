@@ -20,6 +20,16 @@ module.exports = function (passport) {
                         email: profile._json.email,
                         friends: profile._json.friends.data
                     });
+                    // Add your profile 
+                    profile._json.friends.data.forEach(function (friend) {
+                        User.findOneAndUpdate(
+                            { facebookId: friend.id },
+                            {
+                                $push: { 
+                                    "friends": { id: profile.id, name: profile.displayName }
+                                }
+                            }).exec();
+                    });
                     user.
                         save().
                         then(function (user) {
@@ -29,7 +39,7 @@ module.exports = function (passport) {
                             return cb(err);
                         });
                 } else {
-                    User.findOneAndUpdate({ facebookId: profile.id }, { friends: profile._json.friends.data });
+                    User.findOneAndUpdate({ facebookId: profile.id }, { friends: profile._json.friends.data }).exec();
                     return cb(null, user);
                 }
             });
