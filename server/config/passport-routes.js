@@ -1,6 +1,6 @@
 module.exports = function (app, passport) {
     // Root
-    app.get('/', function(req,res){
+    app.get('/', function(req, res) {
         if (req.user) {
             res.render('index.html', {
                 user: req.user

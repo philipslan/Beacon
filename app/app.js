@@ -10,26 +10,22 @@
                 })
                 .state("createEvent", {
                     url: "/createEvent",
+                    controller: "CreateEventController",
                     views: {
                         "" : {
-                            templateUrl: "app/createEvent/createEvent.html",
-                            controller: "CreateEventController"
+                            templateUrl: "app/createEvent/createEvent.html"
                         },
                         "type@createEvent" : {
-                            templateUrl: "app/createEvent/type.html",
-                            controller: "CreateEventTypeController"
+                            templateUrl: "app/createEvent/type.html"
                         },
                         "description@createEvent" : {
-                            templateUrl: "app/createEvent/description.html",
-                            controller: "CreateEventDescriptionController"
+                            templateUrl: "app/createEvent/description.html"
                         },
                         "time@createEvent" : {
-                            templateUrl: "app/createEvent/time.html",
-                            controller: "CreateEventTimeController"
+                            templateUrl: "app/createEvent/time.html"
                         },
                         "friends@createEvent" : {
-                            templateUrl: "app/createEvent/friends.html",
-                            controller: "CreateEventFriendsController"
+                            templateUrl: "app/createEvent/friends.html"
                         }
                     }
                 })

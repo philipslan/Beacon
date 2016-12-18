@@ -43,6 +43,9 @@ app.use(passport.session()); // persistent login sessions
 require('./server/config/passport')(passport);
 require('./server/config/passport-routes')(app, passport);
 
+// routes
+require('./server/config/routes')(app);
+
 // Setup Application Port and Open Views.
 app.set('port',(process.env.PORT || 8080));
 app.use('/app',express.static(__dirname + "/app"));
