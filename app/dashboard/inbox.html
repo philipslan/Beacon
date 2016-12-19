@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-4 events">
+        <div class="event no-select"
+            ng-repeat="ev in events track by $index"
+            ng-class="[ev.pallete, {selected: ev.selected}]"
+            ng-click="select($index)">
+            <div class="col-md-3">00:00 PM</div>
+            <div class="col-md-9">
+                <div class="event-title">{{ ev.group }}</div>
+                {{ ev.desc }}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 chats">
+        Chat
+    </div>
+</div>

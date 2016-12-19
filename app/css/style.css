@@ -61,7 +61,7 @@ html, body, .main {
 .dashboard .title {
     box-shadow: 0 2px 4px -2px gray;
 }
-.dashboard .title .col-md-2 {
+.dashboard .title .col-md-3 {
     text-align: center;
     padding: 0px;
     cursor: pointer;
@@ -192,7 +192,7 @@ html, body, .main {
        -o-transition: background .5s, opacity 1s;
           transition: background .5s, opacity 1s;
 }
-.dashboard .title .col-md-2:active:after, .add-button .col-md-12:active:after {
+.dashboard .title .col-md-3:active:after, .add-button .col-md-12:active:after {
     -webkit-background-size: 0% 0%;
     background-size: 0% 0%;
     opacity: .2;
@@ -200,7 +200,7 @@ html, body, .main {
        -o-transition: 0s;
           transition: 0s;
 }
-.dashboard .title .col-md-2 h3 {
+.dashboard .title .col-md-3 h3 {
     margin: 0px;
     padding: 10px;
 }
@@ -225,10 +225,64 @@ html, body, .main {
     bottom: 0;
 }
 .footer .container {
-    background-color: rgb(0, 195, 115);
+    background-color: rgb(0, 159, 215);
     text-align: center;
     padding: 1rem;
 }
 .footer a {
     color: white;
+}
+/* Inbox */
+.inbox {
+    height: calc(100% - 101px);
+}
+.inbox .row {
+    height: 100%;
+}
+/* Inbox Events */
+.inbox .events {
+    height: 100%;
+    overflow-y: scroll;
+    border-right: 2px solid #efefef;
+    padding: 0px;
+}
+.inbox .events .event {
+    height: 60px;
+    color: white;
+    cursor: pointer;
+}
+.inbox .events .event .event-title {
+    font-size: 15px;
+}
+.inbox .events .event .col-md-3 {
+    padding: 12px 0 0 15px;
+    font-size: 17px;
+}
+.inbox .events .event .col-md-9 {
+    padding: 5px 0 0 0;
+}
+.inbox .events .event.blue {
+    background: rgb(48, 64, 161);
+}
+.inbox .events .event.red {
+    background: rgb(228, 25, 68);
+}
+.inbox .events .event.yellow {
+    background: rgb(226, 192, 47);
+}
+.inbox .events .event.green {
+    background: rgb(0, 195, 115);
+}
+.inbox .events .event:hover {
+    opacity: .5;
+}
+.inbox .events .event.selected {
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+/* Inbox Chats */
+.inbox .chats {
+    height: 100%;
+    overflow-y: scroll;
 }

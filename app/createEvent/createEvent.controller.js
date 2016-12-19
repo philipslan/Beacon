@@ -1,6 +1,6 @@
 (function(){
     angular.module("beacon")
-    .factory("createEventFactory", function($scope) {
+    .factory("createEventFactory", function() {
     	var factory = {};
     	var form = {};
     	factory.getForm = function() {
@@ -11,7 +11,7 @@
     	};
     	return factory;
     })
-    .controller("CreateEventController",["$scope", 'createEventFactory', function($scope, createEventFactory){
+    .controller("CreateEventController",["$scope", "createEventFactory", function($scope, createEventFactory){
     	$scope.createEvent = function() {
     		var form = createEventFactory.getForm();
     		debugger;

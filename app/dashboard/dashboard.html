@@ -1,18 +1,17 @@
 <div class="dashboard">
     <div class="container">
         <div class="row title">
-            <div class="col-md-2 blue-bt no-select"><h3 class="blue">eat</h3></div>
-            <div class="col-md-2 green-bt no-select"><h3 class="green">study</h3></div>
-            <div class="col-md-2 yellow-bt no-select"><h3 class="yellow">exercise</h3></div>
-            <div class="col-md-2 red-bt no-select"><h3 class="red">explore</h3></div>
-            <div class="col-md-2 purple-bt no-select"><h3 class="purple">chill</h3></div>
-            <div class="col-md-2 light-blue-bt no-select"><h3 class="light-blue">other</h3></div>
+            <div class="col-md-3 blue-bt no-select"><h3 class="blue">eat</h3></div>
+            <div class="col-md-3 red-bt no-select"><h3 class="red">work</h3></div>
+            <div class="col-md-3 yellow-bt no-select"><h3 class="yellow">exercise</h3></div>
+            <div class="col-md-3 green-bt no-select"><h3 class="green">chill</h3></div>
         </div>
         <div class="row add-button no-select">
             <div class="col-md-12" ui-sref="createEvent">
                 Add Event
             </div>
         </div>
+        <div class="inbox" ui-view="inbox"></div>
         <div class="footer">
             <div class="container">
                 <a href="#" ng-click="logout($event)">LOGOUT <span class="glyphicon glyphicon-log-out"></span></a>

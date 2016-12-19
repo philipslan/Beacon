@@ -5,8 +5,16 @@
             $stateProvider
                 .state("dashboard", {
                     url: "/dashboard",
-                    templateUrl: "app/dashboard/dashboard.html",
-                    controller: "DashboardController"
+                    views: {
+                        "" : {
+                            templateUrl: "app/dashboard/dashboard.html",
+                            controller: "DashboardController"
+                        },
+                        "inbox@dashboard" : {
+                            templateUrl: "app/dashboard/inbox.html",
+                            controller: "DashboardInboxController"
+                        }
+                    }
                 })
                 .state("createEvent", {
                     url: "/createEvent",
