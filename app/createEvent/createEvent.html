@@ -1,4 +1,4 @@
-<div class="createEvent">
+<div class="createEvent" ng-init="init()">
 	<div class="container">
 		<ul class="nav nav-tabs">
 			<li class="active"><a href="createEvent#type" data-toggle="tab">Type</a></li>
@@ -7,17 +7,17 @@
 			<li><a href="createEvent#friends" data-toggle="tab">Friends</a></li>
 		</ul>
 		<div id="myTabContent" class="tab-content">
-			<div class="tab-pane fade active in" id="type">
-				<div ui-view="type" class="type"></div>
+			<div class="tab-pane fade" id="type">
+				<div ui-view="type"></div>
 			</div>
 			<div class="tab-pane fade" id="description">
-				<div ui-view="description" class="description"></div> 
+				<div ui-view="description"></div> 
 			</div>
 			<div class="tab-pane fade" id="time">
-				<div ui-view="time" class="time"></div>
+				<div ui-view="time"></div>
 			</div>
 			<div class="tab-pane fade" id="friends">
-				<div ui-view="friends" class="friends"></div> 
+				<div ui-view="friends"></div> 
 			</div>
 		</div>
 	</div>

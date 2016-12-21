@@ -1,28 +1,28 @@
 <div class="container">
 	<legend>Event Type</legend>
-	<div class="radio" ng-model="form.type">
+	<div class="radio">
 		<label>
-			<input type="radio" name="optionsRadios" id="eat" value="option1" checked="">
+			<input type="radio" name="optionsRadios" value="eat" checked="" ng-model="inputForm.type">
 			eat
 		</label>
 	</div>
 	<div class="radio">
 		<label>
-			<input type="radio" name="optionsRadios" id="work" value="option2">
+			<input type="radio" name="optionsRadios" value="work" ng-model="inputForm.type">
 			work
 		</label>
 	</div>
 	<div class="radio">
 		<label>
-			<input type="radio" name="optionsRadios" id="exercise" value="option2">
+			<input type="radio" name="optionsRadios" value="exercise" ng-model="inputForm.type">
 			exercise
 		</label>
 	</div>
 	<div class="radio">
 		<label>
-			<input type="radio" name="optionsRadios" id="chill" value="option2">
+			<input type="radio" name="optionsRadios" value="chill" ng-model="inputForm.type">
 			chill
 		</label>
 	</div>
-	<a href="createEvent#description" data-toggle="tab"><button class="btn btn-primary">Description</button></a>
+	<button ng-click="addType(inputForm)" class="btn btn-primary">Description</button>
 </div>
