@@ -18,7 +18,7 @@ module.exports.findUser = function (req, res) {
         findOne(req.body).
         exec().
         then(function (user) {
-            res.send(user._id);
+            res.send(user);
         }).
         catch(function (err) {
             res.sendStatus(404);
@@ -30,6 +30,16 @@ module.exports.getUsers = function (req, res) {
         find({}).
         exec().
         then(function (users) {
+            console.log(users);
             res.json(users);
+        });
+}
+
+module.exports.getFriends = function (req, res) {
+    User.
+        find(req.body).
+        exec().
+        then(function (users) {
+            res.json(users[0].friends);
         });
 }

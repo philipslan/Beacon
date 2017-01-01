@@ -17,8 +17,10 @@
     		"createEventFactory", 
     		"$location", 
     		"$anchorScroll", 
-    		function($scope, createEventFactory, $location, $anchorScroll){
+    		"$http",
+    		function($scope, createEventFactory, $location, $anchorScroll, $http){
     	var form = {};
+    	$scope.friends = 
     	$scope.init = function() {
     		var url = $location.url().toString().split('#');
     		var object;
@@ -29,10 +31,20 @@
 				object = $('#type')	
 			}
 			object.addClass('active in');
-
+			$http({method: 'GET', url:'/api/whoami'}).success(function(data) {
+				$scope.user = data;
+				$scope.user.friends = [{id: '1', name: "Phil Lan"},
+					{id: '2', name: "James Kim"},
+					{id: '3', name: "Jiham Lee"},
+					{id: '4', name: "James Jia"},
+					{id: '5', name: "Evan House"}];
+			});
+			
     	}
     	$scope.createEvent = function(inputForm) {
     		form = createEventFactory.appendForm(inputForm);
+    		console.log(form);
+    		console.log(inputForm);
     	};
     	$scope.addField =  function(inputForm) {
     		form = createEventFactory.appendForm(inputForm);

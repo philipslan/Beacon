@@ -2,8 +2,8 @@
 	<div class="col-md-8 col-offset-2">
 		<div class="row">
 			<h4>Friends</h4>
-			<div class="form-group">
-				<input class="form-control" id="description" type="text" ng-model="inputForm.friends">
+			<div class="form-group" ng-repeat="friend in user.friends | filter:name">
+				<input type="checkbox" name="" ng-model="inputForm.friends[friend.id]"> {{friend.name}}
 			</div>
 			<button class="btn btn-primary" ng-click="createEvent(inputForm)" ui-sref="dashboard">Submit</button>
 		</div>
