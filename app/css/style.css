@@ -250,6 +250,7 @@ html, body, .main {
     height: 60px;
     color: white;
     cursor: pointer;
+    opacity: .65;
 }
 .inbox .events .event .event-title {
     font-size: 15px;
@@ -274,12 +275,13 @@ html, body, .main {
     background: rgb(0, 195, 115);
 }
 .inbox .events .event:hover {
-    opacity: .5;
+    opacity: 1;
 }
 .inbox .events .event.selected {
-    border-left: 2px solid white;
+    /*border-left: 2px solid white;
     border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid white;*/
+    opacity: 1;
 }
 /* Inbox Chats */
 .inbox .chats {
