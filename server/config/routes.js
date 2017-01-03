@@ -1,8 +1,8 @@
-var userController = require("../controller/user.controller");
+var eventController = require("../controller/event.controller");
 
 module.exports = function (app) {
 	app.get("/api/whoami", function(req, res) {
-		userController.findUser(req, res);
+		res.send(req.user);
 	});
 	app.get('/getFriends', function(req, res) {
 		if (req.user) {
@@ -10,4 +10,7 @@ module.exports = function (app) {
             res.close();
         }
 	});
+	app.post('/createEvent', function(req, res) {
+		eventController.addEvent(req, res);
+	})
 }

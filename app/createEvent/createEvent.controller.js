@@ -38,13 +38,13 @@
 					{id: '3', name: "Jiham Lee"},
 					{id: '4', name: "James Jia"},
 					{id: '5', name: "Evan House"}];
+					$scope.inputForm = {};
+					$scope.inputForm.friends = {};
 			});
-			
     	}
     	$scope.createEvent = function(inputForm) {
     		form = createEventFactory.appendForm(inputForm);
-    		console.log(form);
-    		console.log(inputForm);
+    		$http({method: 'POST', url: '/createEvent', data: form});
     	};
     	$scope.addField =  function(inputForm) {
     		form = createEventFactory.appendForm(inputForm);
